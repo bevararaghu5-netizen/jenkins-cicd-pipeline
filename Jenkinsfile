@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Deploying application...'
                 bat 'docker rm -f jenkins-cicd-app 2>NUL || exit /b 0'
-                bat 'docker run -d --name jenkins-cicd-app -p 3000:3000 jenkins-cicd-demo:latest'
+                bat 'docker run -d --name jenkins-cicd-app -p 3001:3000 jenkins-cicd-demo:latest'
             }
         }
     }
